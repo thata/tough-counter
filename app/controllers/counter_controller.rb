@@ -4,7 +4,7 @@ class CounterController < ApplicationController
 
     n = (cookies[key] || '0').to_i
     n = n + 1
-    cookies[key] = n
+    cookies[key] = {value: n, expires: Time.new(2030)}
 
     @counter = n
   end
