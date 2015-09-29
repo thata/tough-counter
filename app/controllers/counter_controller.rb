@@ -6,6 +6,6 @@ class CounterController < ApplicationController
     n = n + 1
     cookies[key] = n
 
-    render text: n.to_s
+    @counter = n
   end
 end
